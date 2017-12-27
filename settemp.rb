@@ -4,9 +4,12 @@ require 'net/http'
 require 'openssl'
 require 'json'
 
-url = URI("https://firebase-apiserver20-tah01-iad01.dapi.production.nest.com:9553/devices/thermostats/wRFYwmAT7rFQ1auMNYlpNzr2E_7Duxt8")
-authid = 'Bearer c.p5RAFUUnFqmAaqypUqblXzlfxi1Hlov1bAglvFm6Lbm6mrEJJq2Eiy81DcAwlnFDKULKxmghxmUvyJNvjedNAlcRGBBlGMPxfc3TOkmeY38LHq4cQJGTW0ebFVADnoHskkfjw1sTTxGEapfa'
-targettemp = '24'
+load 'vars.rb'
+
+url = URI(NEST_STAT_SPECIFIC_URL)
+
+authid = AUTH_ID
+targettemp = TARGET_TEMP
 
 http = Net::HTTP.new(url.host, url.port)
 http.use_ssl = true
