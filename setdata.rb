@@ -3,7 +3,7 @@ require 'net/http'
 require 'openssl'
 require 'json'
 
-load 'vars.rb'
+load 'variables.rb'
 
 url = URI(NEST_STAT_SPECIFIC_URL)
 
