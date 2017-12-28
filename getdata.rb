@@ -19,6 +19,7 @@ response = http.request(request)
 
 p response.code
 parsed = JSON.parse(response.body)
+
 p parsed["devices"]["thermostats"][STAT_ID]["target_temperature_c"]
 p parsed["devices"]["thermostats"][STAT_ID]["name"]
 p parsed["devices"]["thermostats"][STAT_ID]["humidity"]

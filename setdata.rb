@@ -20,4 +20,5 @@ response = http.request(request)
 
 p response.code
 parsed = JSON.parse(response.body)
+
 p parsed["target_temperature_c"]
